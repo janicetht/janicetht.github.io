@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>IERG3280</title>
+  </head>
+
+  <body>
+    <div
+      uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+    >
+      <nav
+        style="background-color: white"
+        class="uk-navbar-container"
+        uk-navbar
+      >
+        <div class="uk-navbar-left navbar-margin-left">
+          <ul class="uk-navbar-nav">
+            <a class="uk-navbar-item uk-logo" href="index.html"
+              ><img class="logo" src="./img/logo.png" alt="IERG3280"
+            /></a>
+          </ul>
+        </div>
+        <div class="uk-navbar-right navbar-margin-right">
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li>
+              <a href="#service" uk-scroll> Services </a>
+            </li>
+            <li>
+              <a href="#clients" uk-scroll> Clients </a>
+            </li>
+            <li>
+              <a href="#"> Contact </a>
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="uk-navbar-toggle uk-hidden@m"
+            uk-navbar-toggle-icon
+            uk-toggle="target: #sidenav"
+          ></a>
+        </div>
+      </nav>
+    </div>
+    <div
+      id="sidenav"
+      uk-offcanvas="flip: true; overlay: true"
+      class="uk-offcanvas uk-hidden@m"
+    >
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+          <li>
+            <a href="#"> Services </a>
+          </li>
+          <li>
+            <a href="#"> Clients </a>
+          </li>
+          <li>
+            <a href="#"> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div uk-slideshow="animation: push">
+      <div
+        class="uk-position-relative uk-visible-toggle uk-light"
+        uk-slideshow="autoplay: true"
+        tabindex="-1"
+      >
+        <ul class="uk-slideshow-items">
+          <li>
+            <img
+              src="https://images.pexels.com/photos/8445729/pexels-photo-8445729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              uk-cover
+            />
+            <div class="uk-overlay-primary uk-position-cover"></div>
+            <div
+              class="uk-position-center uk-position-small uk-text-center uk-light"
+            >
+              <h1 class="uk-margin-remove">
+                <p class="uk-hidden">IERG3280</p>
+                <img class="logo2" src="./img/logo_white.png" alt="IERG3280" />
+              </h1>
+              <h4 class="uk-margin-remove">CUHK X IERG</h4>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/2964111/pexels-photo-2964111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              uk-cover
+            />
+            <div class="uk-overlay-primary uk-position-cover"></div>
+            <div
+              class="uk-position-center uk-position-small uk-text-center uk-light"
+            >
+              <h1 class="uk-margin-remove">
+                <p class="uk-hidden">IERG3280</p>
+                <img class="logo2" src="./img/logo_white.png" alt="IERG3280" />
+              </h1>
+              <h4 class="uk-margin-remove">HONG KONG x TAIWAN</h4>
+            </div>
+          </li>
+        </ul>
+
+        <a
+          class="uk-position-center-left uk-position-small uk-hidden-hover"
+          href="#"
+          uk-slidenav-previous
+          uk-slideshow-item="previous"
+        ></a>
+        <a
+          class="uk-position-center-right uk-position-small uk-hidden-hover"
+          href="#"
+          uk-slidenav-next
+          uk-slideshow-item="next"
+        ></a>
+      </div>
+
+      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+    </div>
+
+    <div
+      class="uk-section uk-section-muted uk-section-default uk-preserve-color"
+    >
+      <div class="uk-container">
+        <div class="uk-panel uk-dark uk-margin-medium">
+          <h2>About Our Project</h2>
+        </div>
+
+        <div class="uk-panel">
+          <img
+            class="uk-align-left uk-margin-remove-adjacent uk-margin-small-top uk-width-1-3"
+            src="./img/intro.png"
+            alt="OriginBit Certs"
+          />
+
+          <div
+            uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true"
+          >
+            <div class="uk-card uk-card-body about-us-card">
+              <p>
+                SEO is the process of optimizing a website or web page to rank
+                higher in search engine results pages (SERPs). The goal of SEO
+                is to attract more organic traffic to a website and increase its
+                visibility, which seeks more attention from the target audience.
+                Google's PageRank algorithm is the most widely used algorithm
+                for ranking web pages in SERPs.
+              </p>
+              <p>
+                The PageRank algorithm assigns a score to each web page based on
+                the number and quality of other web pages that link to it. The
+                score is used to determine the importance and relevance of the
+                web page to the user's search query.
+              </p>
+              <p>
+                The PageRank algorithm equation is: <br />𝑃𝑅(𝜒) = 𝛼 ( 1 𝑁 ) + (1
+                − 𝛼)∑𝑃𝑅(𝑡𝑖 ) 𝑐(𝑡𝑖 ) 𝑛 𝑡=1 <br />where C(t) refers to the
+                out-degree of t, α refers to the probability of random jump, N
+                refers to the total number of nodes in the graph. However, there
+                are some methods that can utilize this algorithm to pushing some
+                irrelevant page onto the top. In this proposal, we will discuss
+                methods to increase the importance score of a homepage. We will
+                also propose some ideas for Google to counter the measures used
+                to artificially improve the score of an arbitrary page and
+                prevent its PageRank scheme from being abused.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="service" class="uk-section">
+      <div class="uk-container">
+        <h2>Our Services</h2>
+
+        <div class="uk-child-width-1-4@m uk-grid-match" uk-grid>
+          <div>
+            <div
+              class="uk-card uk-card-default"
+              uk-scrollspy="cls: uk-animation-slide-left; delay: 300; repeat: true"
+            >
+              <div class="uk-card-media-top service-card">
+                <img
+                  style="max-width: 200px"
+                  class="service-card-img"
+                  src="./img/ios_android.png"
+                  alt="Web and App Development"
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">
+                  Web and Mobile Technology Development
+                </h3>
+                <ul class="uk-list">
+                  <li>iOS, Android, and Web</li>
+                  <li>Fully customizable for your business case</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="uk-card uk-card-default"
+              uk-scrollspy="cls: uk-animation-slide-left; delay: 300; repeat: true"
+            >
+              <div class="uk-card-media-top service-card">
+                <img
+                  style="max-width: 200px"
+                  class="service-card-img"
+                  src="./img/cloud_brands.png"
+                  alt="Cloud Solutions"
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Cloud Solutions</h3>
+                <ul class="uk-list">
+                  <li>Global solutions</li>
+                  <li>AWS, GCP, Azure, and Alibaba Cloud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="uk-card uk-card-default"
+              uk-scrollspy="cls: uk-animation-slide-right; delay: 300; repeat: true"
+            >
+              <div class="uk-card-media-top service-card">
+                <img
+                  style="max-width: 200px"
+                  class="service-card-img"
+                  src="./img/system-int.png"
+                  alt="System Integrations"
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">System Integrations</h3>
+                <ul class="uk-list">
+                  <li>
+                    E.g. Google Maps Technology, Oracle NetSuite Cloud ERP,
+                    Salesforce, etc.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="uk-card uk-card-default"
+              uk-scrollspy="cls: uk-animation-slide-right; delay: 300; repeat: true"
+            >
+              <div class="uk-card-media-top service-card">
+                <img
+                  style="max-width: 200px"
+                  class="service-card-img"
+                  src="./img/sdg-4.png"
+                  alt="Technology Training"
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Technology Training</h3>
+                <ul class="uk-list">
+                  <li>STEM for NGO</li>
+                  <li>Data Science for corporates</li>
+                  <li>SDG 4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="clients" class="uk-section uk-section-muted">
+      <div class="uk-container">
+        <h2>Our Clients</h2>
+
+        <div
+          class="uk-position-relative uk-visible-toggle uk-light"
+          tabindex="-1"
+          uk-slider="autoplay: true; autoplay-interval: 3000"
+        >
+          <ul
+            class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-6@m uk-light"
+          >
+            <li class="uk-transition-toggle client" tabindex="0">
+              <img
+                class="client-img"
+                uk-img="loading: lazy"
+                src="./img/clients/ogcio-logo.png"
+                alt=""
+              />
+            </li>
+            <li class="uk-transition-toggle client" tabindex="0">
+              <img
+                class="client-img"
+                uk-img="loading: lazy"
+                src="./img/clients/erb-logo.svg"
+                alt=""
+              />
+            </li>
+          </ul>
+
+          <a
+            class="uk-position-center-left uk-position-small uk-hidden-hover slider-arrow"
+            href="#"
+            uk-slidenav-previous
+            uk-slider-item="previous"
+          ></a>
+          <a
+            class="uk-position-center-right uk-position-small uk-hidden-hover slider-arrow"
+            href="#"
+            uk-slidenav-next
+            uk-slider-item="next"
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-section">
+      <div class="uk-container">
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+          <div>
+            <a class="uk-navbar-item uk-logo" href="#"
+              ><img
+                class="footer-logo"
+                src="./img/logo.png"
+                alt="OriginBit Logo"
+            /></a>
+            <center>
+              <i
+                >Our mission is to achieve your business goals through
+                technology.</i
+              >
+            </center>
+          </div>
+          <div>
+            <center>
+              <button
+                style="margin-bottom: 5px"
+                class="uk-button uk-button-secondary"
+              >
+                Get Free Consultation
+              </button>
+              <button
+                style="margin-bottom: 5px"
+                class="uk-button uk-button-secondary"
+              >
+                Get Our Deck
+              </button>
+            </center>
+          </div>
+          <div>
+            <h3 class="uk-margin-remove">Contact Us</h3>
+            <ul class="uk-list">
+              <li>Tel: <a href="tel:85227233023">+852 2723 3023</a></li>
+              <li>Fax: <a href="fax:85227233003">+852 2723 3003</a></li>
+              <li>
+                Email:
+                <a href="mailto:contact@originbit.asia"
+                  >contact@originbit.asia</a
+                >
+              </li>
+              <li>
+                Address (Hong Kong):
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/OriginBit/@22.3109504,114.217798,17z/data=!3m1!4b1!4m5!3m4!1s0x340401ee08af54eb:0xed5a060e00105cd9!8m2!3d22.3109504!4d114.2199867"
+                  >Rm 711, 7/F, Metro Centre 1, 32 Lam Hing Street, Kowloon Bay,
+                  Kowloon</a
+                >
+              </li>
+              <li>
+                Address (Taiwan):
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/TWJOIN+%E5%93%B2%E7%85%9C%E7%A7%91%E6%8A%80/@25.0510614,121.5416339,17z/data=!3m1!5s0x3442abdc3cfa08e9:0xa5a3917e24a6b66f!4m13!1m7!3m6!1s0x3442abddc1fad619:0xd3bd631a734fd791!2zMTIsIE5vLiA4MOiZn-W-qeiIiOWMl-i3r-S4reWxseWNgOWPsOWMl-W4guWPsOeBoyAxMDQ!3b1!8m2!3d25.0510614!4d121.5438226!3m4!1s0x3442abe8ab1db35f:0x23684b4957989895!8m2!3d25.0510614!4d121.5438226"
+                  >台北市中山區復興北路80號12樓</a
+                >
+                /
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/TWJOIN%E5%93%B2%E7%85%9C%E7%A7%91%E6%8A%80-%E5%8F%B0%E4%B8%AD%E5%88%86%E5%85%AC%E5%8F%B8/@24.1544849,120.1047828,10z/data=!4m9!1m2!2m1!1sTWJOIN!3m5!1s0x34693dcd2cc6d6b5:0x969985a0d2658a14!8m2!3d24.1544849!4d120.6650855!15sCgZUV0pPSU6SARBzb2Z0d2FyZV9jb21wYW55"
+                  >台中市北區台灣大道二段360號18樓C</a
+                >
+              </li>
+              <li>
+                <ul class="uk-iconnav">
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://wa.me/+85292025576"
+                      uk-icon="icon: whatsapp"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/OriginBitFB/"
+                      uk-icon="icon: facebook"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://instagram.com/originbit"
+                      uk-icon="icon: instagram"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/originbit-limited"
+                      uk-icon="icon: linkedin"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit-icons.min.js"></script>
+  </body>
+</html>
