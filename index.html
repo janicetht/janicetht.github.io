@@ -28,18 +28,36 @@
       <div class="header">
         <div class="navbar-bg blue-bg">
           <div class="navbar container">
-            <li class="logo">Hiu Tung Janice Tong</li>
+            <div class="logo">Hiu Tung Janice Tong</div>
             <ul>
               <li><a href="/#about">About</a></li>
               <li><a href="/#experience">Experience</a></li>
               <li><a href="/#education">Education</a></li>
+              <li><a href="/#projects">Projects</a></li>
             </ul>
+            <div class="hamburger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="white"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
       <div class="blue-bg">
         <div class="container">
           <div class="banner">
+            <div class="mobile-icon"><img src="profile.jpeg" /></div>
+
             <div class="left">
               <div>Hello and Welcome! This is me.</div>
               <div class="title">Hiu Tung Janice Tong</div>
@@ -57,8 +75,8 @@
           I am a recent graduate, majoring in Information Engineering and
           minoring in Web and Cloud Computing from The Chinese University of
           Hong Kong. With over 1 year of hands-on full-stack development
-          experience, I specialize in crafting web and mobile applications
-          across diverse sectors — e-commerce, social media, and online learning
+          experience,I specialize in crafting web and mobile applications across
+          diverse sectors — e-commerce, social media, and online learning
           platforms, etc.
         </div>
       </div>
@@ -67,8 +85,8 @@
           <div class="subtitle">Experience</div>
           <div class="d-flex">
             <div class="bar"></div>
-            <div>
-              <div class="company">OriginBit Limited | Hong Kong</div>
+            <div style="width: 96%">
+              <div class="company">OriginBit Limited</div>
               <div class="job">Programmer (Jun 2023 - Nov 2023)</div>
               <div class="job">Parttime Programmer (Sep 2022 – Jun 2023)</div>
               <div class="job">IT Trainee (Jun 2022 – Aug 2022)</div>
@@ -78,8 +96,9 @@
               </div>
               <div>
                 Developed web applications with vue.js, mobile applications with
-                flutter and backend systems both in a team and on my own
+                flutter
               </div>
+              <div>Created APIs using Strapi and managed mySQL database</div>
               <div>
                 Met with clients and turned their business needs into innovative
                 software solutions
@@ -93,19 +112,16 @@
           <br />
           <div class="d-flex">
             <div class="bar"></div>
-            <div>
-              <div class="company">
-                iSWIM Technology (HK) Limited | Hong Kong
-              </div>
+            <div style="width: 96%">
+              <div class="company">iSWIM Technology (HK) Limited</div>
               <div class="job">IT Intern (Jun 2021 – Aug 2021)</div>
               <div>
                 Designed and developed web pages for the company’s internal use
                 using K2
               </div>
               <div>
-                Presented the web pages to colleagues in meetings, analyzed
-                their opinion as users and updated the design and functions for
-                the web pages
+                Presented web pages to colleagues, gathered user feedback, and
+                refined design and functionality accordingly
               </div>
               <div>
                 Responded to phone calls and in-person questions from colleagues
@@ -127,6 +143,27 @@
         <div>Minor in Web and Cloud Computing</div>
         <div>(Sep 2019 - Jul 2023)</div>
       </div>
+      <div class="grey-bg">
+        <div class="section container" id="projects">
+          <div class="subtitle">Projects</div>
+          <br />
+          <div class="project-box">
+            <div class="left">
+              <div>CUHK Alumni (Final Year Project)</div>
+              <div>
+                CUHK Alumni is my final year project, where I developed a mobile
+                application for alumni of The Chinese University of Hong Kong,
+                facilitating connections and providing updates from the alumni
+                association. The app, built using Flutter for frontend
+                development, has been successfully deployed on both iOS and
+                Android platforms. For the backend system, we implemented APIs
+                using Strapi and utilized SQLite as the database.
+              </div>
+            </div>
+            <img class="thumbnail" src="/thumbnails/CU Alumni.png" />
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -136,8 +173,13 @@
 
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-
-    if (scroll >= 310) {
+    var value;
+    if (screen.width < 767) {
+      value = 480;
+    } else {
+      value = 310;
+    }
+    if (scroll >= value) {
       $(".navbar-bg").addClass("white-bg");
       $(".navbar-bg").removeClass("blue-bg");
     } else {

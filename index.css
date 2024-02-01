@@ -9,8 +9,9 @@
 }
 
 .navbar {
-  display: block;
+  display: flex;
   text-align: right;
+  padding: 14px 14px;
 }
 
 .navbar .logo {
@@ -31,6 +32,18 @@
   margin-top: 10px;
   position: relative;
   padding-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar ul {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .white-bg {
@@ -61,6 +74,14 @@
   padding-bottom: 64px;
   margin: auto;
   justify-content: space-between;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    padding-top: 85px;
+  }
 }
 
 .banner .title {
@@ -86,8 +107,35 @@
   padding: 6px 12px;
 }
 
+.mobile-icon {
+  padding-bottom: 18px;
+  text-align: center;
+}
+
+.mobile-icon img {
+  width: 220px;
+  border-radius: 110px;
+}
+
+@media screen and (min-width: 767px) {
+  .mobile-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    text-align: center;
+    display: block;
+    padding-bottom: 52px;
+  }
+  .banner .right {
+    display: none;
+  }
+}
+
 .section {
-  padding: 48px 10px;
+  padding: 48px 18px;
 }
 
 .grey-bg {
@@ -102,7 +150,7 @@
 
 .bar {
   background-color: rgb(0, 42, 182);
-  width: 5px;
+  width: 4px;
   margin-right: 10px;
   border-radius: 3px;
 }
@@ -123,4 +171,19 @@
   font-style: italic;
   line-height: 27px;
   padding-left: 4px;
+}
+
+.project-box {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.project-box .left {
+  margin-right: 24px;
+}
+
+.thumbnail {
+  width: 300px;
+  max-height: 300px;
 }
